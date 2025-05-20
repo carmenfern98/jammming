@@ -1,5 +1,5 @@
 const clientId = 'ab2b2fe9f7dd44ff8b115b22017790c0'; // Replace with your client ID
-const redirectUri = 'https://653f-114-51-57-167.ngrok-free.app'; // Must match exactly what you put in Spotify Dev Console
+const redirectUri = 'https://carmenfern98.github.io/jammming/'; // Must match exactly what you put in Spotify Dev Console
 const scope = 'playlist-modify-public playlist-modify-private';
 
 function generateRandomString(length) {
