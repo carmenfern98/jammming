@@ -23,7 +23,6 @@ display: flex;
 border-radius: 10px;
 justify-content: center;
 background-color: #8300c4;
-text-align: left;
 `
 const PlaylistContainer = styled.div`
 display:flex;
@@ -54,6 +53,12 @@ const AppTitle = styled.h2`
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
+`
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 `
 
 function App() {
@@ -160,7 +165,9 @@ const removeFromPlaylist = (track) => {
       <SearchResults searchResults={searchResults} onAdd={addToPlaylist}/>
       </SearchResultContainer>
       <PlaylistContainer>
+        <InputWrapper>
         <PlaylistName type="text" value={playlistTitle}onChange={handleTitleChange}placeholder="Enter playlist title"/>
+        </InputWrapper>
       <Playlist playlistTitle={playlistTitle} playlistTracks={playlistTracks} onRemove={removeFromPlaylist} onSave={saveToSpotify}/>
       </PlaylistContainer>
       </SearchPlaylistContainer>

@@ -22,6 +22,12 @@ cursor: pointer;}`
 const PlaylistTitle = styled.h2`
 color: #FFFFFF;
 `
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+`
 
 export const Playlist = ({playlistTitle, playlistTracks, onRemove, onSave, isInPlaylist}) =>
 {
@@ -29,7 +35,9 @@ export const Playlist = ({playlistTitle, playlistTracks, onRemove, onSave, isInP
         <div>
             <PlaylistTitle>{playlistTitle}</PlaylistTitle>
             <TrackList isInPlaylist={true} tracks={playlistTracks} onRemove={onRemove}/>
+            <ButtonWrapper>
             <SaveButton type="submit" onClick={onSave}>Save to Spotify</SaveButton>
+            </ButtonWrapper>
         </div>
     )
 }
