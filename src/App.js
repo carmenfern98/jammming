@@ -23,6 +23,7 @@ display: flex;
 border-radius: 10px;
 justify-content: center;
 background-color: #8300c4;
+text-align: left;
 `
 const PlaylistContainer = styled.div`
 display:flex;
